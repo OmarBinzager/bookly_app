@@ -22,6 +22,14 @@ class _SplashViewBodyState extends ConsumerState<SplashViewBody>
   @override
   void initState() {
     super.initState();
+    _initAnimations();
+
+    _startAnimations();
+
+    Future.delayed(Duration(milliseconds: 1800));
+  }
+
+  void _initAnimations() {
     _logoController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 1),
@@ -33,7 +41,7 @@ class _SplashViewBodyState extends ConsumerState<SplashViewBody>
       begin: 0.0,
       end: 1.0,
     ).animate(CurvedAnimation(parent: _logoController, curve: Curves.linear));
-
+    
     _textController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
@@ -42,10 +50,6 @@ class _SplashViewBodyState extends ConsumerState<SplashViewBody>
       begin: 0.0,
       end: 1.0,
     ).animate(CurvedAnimation(parent: _textController, curve: Curves.linear));
-
-    _startAnimations();
-
-    Future.delayed(Duration(milliseconds: 1800));
   }
 
   @override
