@@ -1,7 +1,9 @@
 import 'package:bookly/core/constant/app_colors.dart';
 import 'package:bookly/core/constant/assets.dart';
+import 'package:bookly/core/constant/routes.dart';
 import 'package:flutter_riverpod/src/consumer.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends ConsumerStatefulWidget {
   const SplashViewBody({super.key});
@@ -26,7 +28,14 @@ class _SplashViewBodyState extends ConsumerState<SplashViewBody>
 
     _startAnimations();
 
-    Future.delayed(Duration(milliseconds: 1800));
+    _navigateToHome();
+  }
+
+  void _navigateToHome() {
+    Future.delayed(
+      const Duration(milliseconds: 2500),
+      () => context.pushReplacementNamed(Routes.home),
+    );
   }
 
   void _initAnimations() {
@@ -41,7 +50,7 @@ class _SplashViewBodyState extends ConsumerState<SplashViewBody>
       begin: 0.0,
       end: 1.0,
     ).animate(CurvedAnimation(parent: _logoController, curve: Curves.linear));
-    
+
     _textController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 500),
