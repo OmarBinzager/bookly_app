@@ -1,5 +1,6 @@
+import 'package:bookly/core/constant/app_colors.dart';
 import 'package:bookly/core/services/router.dart';
-import 'package:bookly/features/home/presentation/home_view.dart';
+import 'package:bookly/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart'; // Add this import
 
@@ -20,15 +21,12 @@ class BooklyApp extends ConsumerWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
+      theme: ThemeData().copyWith(
+        scaffoldBackgroundColor: AppColors.primaryColor,
+        textTheme: TextTheme(
+          
+        )
+      ),
     );
-  }
-}
-
-class AppView extends StatelessWidget {
-  const AppView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return HomeView();
   }
 }
