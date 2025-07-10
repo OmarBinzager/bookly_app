@@ -21,7 +21,7 @@ class BooklyApp extends ConsumerWidget {
     return MaterialApp.router(
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData().copyWith(
+      theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: AppColors.primaryColor,
         textTheme: TextTheme(
           
