@@ -3,7 +3,7 @@
 
 import 'package:bookly/core/constant/routes.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
-import 'package:bookly/features/splash/presentation/view/splash_view.dart';
+import 'package:bookly/features/home/splash/presentation/view/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
 
