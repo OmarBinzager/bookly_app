@@ -2,7 +2,7 @@
 
 
 import 'package:bookly/core/constant/routes.dart';
-import 'package:bookly/features/home/domain/entities/home_entity.dart';
+import 'package:bookly/features/home/domain/entities/book_entity.dart';
 import 'package:bookly/features/home/presentation/views/books_detail_view.dart';
 import 'package:bookly/features/home/presentation/views/home_view.dart';
 import 'package:bookly/features/splash/presentation/view/splash_view.dart';
