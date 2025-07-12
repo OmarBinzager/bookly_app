@@ -45,7 +45,10 @@ class BooksDetailsViewBody extends StatelessWidget {
           children: [
             SizedBox(
           height: MediaQuery.of(context).size.height * .325,
-          child: ImageBox(image: book.image, borderRadius: 16),
+          child: Hero(
+            tag: book.bookId,
+            transitionOnUserGestures: true,
+            child: ImageBox(image: book.image, borderRadius: 16)),
         ),
         SizedBox(height: 30),
         Text(

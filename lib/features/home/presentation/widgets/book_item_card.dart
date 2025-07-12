@@ -19,7 +19,10 @@ class BookItemCard extends StatelessWidget {
         height: 120,
         child: Row(
           children: [
-            ImageBox(image: book.image, aspectRatio: 2.2 / 3, borderRadius: 8),
+            Hero(
+              tag: book.bookId,
+              transitionOnUserGestures: true,
+              child: ImageBox(image: book.image, aspectRatio: 2.2 / 3, borderRadius: 8)),
             SizedBox(width: 5),
             Expanded(
               child: Column(

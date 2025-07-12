@@ -9,47 +9,19 @@ class BestSellerListView extends StatelessWidget {
 
   static const List<BookEntity> books = [
     BookEntity(
-      FixedAssets.book3, 
-      'Harry Potter and the Goblet of Fire', 
-      'Om. Binzager', 
-      19.99, 
-      4.5, 
-      4032),
+      image: FixedAssets.book3, 
+      title: 'Harry Potter and the Goblet of Fire', 
+      authorName: 'Om. Binzager', 
+      price: 19.99, 
+      rating: 4.5, 
+      rateCount: 4032, bookId: '1'),
     BookEntity(
-      FixedAssets.book2, 
-      'Harry Potter and the Goblet of Fire', 
-      'Om. Bahady', 
-      19.99, 
-      4.5, 
-      4032),
-    BookEntity(
-      FixedAssets.book1, 
-      'Harry Potter and the Goblet of Fire', 
-      'Om. Binzager', 
-      19.99, 
-      4.5, 
-      4032),
-    BookEntity(
-      FixedAssets.book4, 
-      'Harry Potter and the Goblet of Fire', 
-      'Om. Binzager', 
-      19.99, 
-      4.5, 
-      4032),
-    BookEntity(
-      FixedAssets.book5, 
-      'Harry Potter and the Goblet of Fire', 
-      'Om. Binzager', 
-      19.99, 
-      4.5, 
-      4032),
-    BookEntity(
-      FixedAssets.book6, 
-      'Harry Potter and the Goblet of Fire', 
-      'Om. Binzager', 
-      19.99, 
-      4.5, 
-      4032),
+      image: FixedAssets.book2, 
+      title: 'Harry Potter and the Goblet of Fire', 
+      authorName: 'Om. Bahady', 
+      price: 19.99, 
+      rating:  4.5, 
+      rateCount: 4032, bookId: '2'),
   ];
 
   @override
