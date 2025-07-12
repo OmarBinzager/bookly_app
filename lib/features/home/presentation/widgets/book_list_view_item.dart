@@ -1,23 +1,23 @@
+import 'dart:ui';
 
-
+import 'package:bookly/features/home/presentation/widgets/blured_icon_button.dart';
+import 'package:bookly/features/home/presentation/widgets/image_box.dart';
 import 'package:flutter/material.dart';
 
 class BooksListViewItem extends StatelessWidget {
-  const BooksListViewItem({super.key, required this.image});
+  const BooksListViewItem({super.key, required this.image, this.parentHight});
   final String image;
+  final double? parentHight;
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 4 / 5.5,
-      child: Container(
-        // width: MediaQuery.of(context).size.width * .3,
-
-        margin: const EdgeInsets.symmetric(horizontal: 8.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          image: DecorationImage(image: AssetImage(image), fit: BoxFit.fill),
-        ),
+    final buttonSize = parentHight == null ? parentHight! * .25 : 40.0;
+    return ImageBox(
+      image: image,
+      child: Positioned(
+        bottom: 10,
+        right: 10,
+        child: BluredIconButton(radius: buttonSize),
       ),
     );
   }

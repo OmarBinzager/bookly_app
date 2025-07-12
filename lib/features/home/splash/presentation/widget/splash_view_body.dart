@@ -1,4 +1,5 @@
 import 'package:bookly/core/constant/app_colors.dart';
+import 'package:bookly/core/constant/app_spacing.dart';
 import 'package:bookly/core/constant/assets.dart';
 import 'package:bookly/core/constant/routes.dart';
 import 'package:flutter_riverpod/src/consumer.dart';
@@ -71,7 +72,7 @@ class _SplashViewBodyState extends ConsumerState<SplashViewBody>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(18.0),
+      padding: const EdgeInsets.all(AppSpacing.pageHoirzontalPadding),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,

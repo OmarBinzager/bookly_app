@@ -1,4 +1,4 @@
-class FixedAssets {
+abstract class FixedAssets {
   static const String logo = 'assets/images/logo.png';
   static const String book1 = 'assets/images/book1.jpg';
   static const String book2 = 'assets/images/book2.jpg';

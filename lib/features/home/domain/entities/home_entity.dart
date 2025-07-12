@@ -8,6 +8,7 @@ class BookEntity {
   final String authorName;
   final num price;
   final num rating;
+  final num rateCount;
 
-  BookEntity(this.image, this.title, this.authorName, this.price, this.rating);
+  const BookEntity(this.image, this.title, this.authorName, this.price, this.rating, this.rateCount);
 }
